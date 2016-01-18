@@ -1135,18 +1135,6 @@ vp.init_sorter = function($elements)
 	}
 };
 
-// Tipsy
-vp.init_tipsy = function()
-{
-	if (jQuery.fn.tipsy)
-	{
-		jQuery('.vp-js-tipsy.description').tipsy({ live: true, gravity : 'e' });
-		jQuery('.vp-js-tipsy.slideinput').tipsy({ live: true, trigger : 'focus' });
-		jQuery('.vp-js-tipsy.image-item').tipsy({ live: true });
-	}
-};
-vp.init_tipsy();
-
 // Init Sorter
 vp.init_ace_editor = function($elements)
 {

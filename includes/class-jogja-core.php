@@ -68,11 +68,13 @@ class Jogja_Core {
 	 */
 	public function __construct() {
 
-		$this->plugin_name = 'jogja-core';
-		$this->version = '1.0';
+		$this->plugin_name 	= 'jogja-core';
+		$this->version 		= '1.0';
 
 		$this->load_dependencies();
 		$this->load_addons();
+		$this->load_extensions();
+		$this->load_functions();
 		$this->set_locale();
 	}
 
@@ -118,6 +120,25 @@ class Jogja_Core {
 	private function load_addons() {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'addons/metabox/bootstrap.php';
 		new jogja_Mie_Customizer();
+	}
+
+	/**
+	 * Load Extensions
+	 *
+	 * @return void
+	 **/
+	private function load_extensions() {
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/extensions/extended-post-types.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/extensions/extended-taxonomies.php';
+	}
+
+	/**
+	 * Load Functions
+	 *
+	 * @return void
+	 **/
+	private function load_functions() {
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/function-post-types.php';
 	}
 
 	/**

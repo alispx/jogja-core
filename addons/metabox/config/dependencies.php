@@ -20,7 +20,7 @@ return array(
 			'jquery' => array(
 				'path'     => '',
 				'deps'     => array(),
-				'ver'      => '1.8.3',
+				'ver'      => '1.11.3',
 				'override' => false,
 			),
 			'bootstrap-colorpicker' => array(
@@ -31,7 +31,7 @@ return array(
 			'tipsy' => array(
 				'path'     => VP_PUBLIC_URL . '/js/vendor/jquery.tipsy.js',
 				'deps'     => array('jquery'),
-				'ver'      => '1.0.0a'
+				'ver'      => '1.0.2'
 			),
 			'scrollspy' => array(
 				'path'     => VP_PUBLIC_URL . '/js/vendor/jquery-scrollspy.js',
@@ -41,27 +41,27 @@ return array(
 			'jquery-ui-core' => array(
 				'path'     => '',
 				'deps'     => array(),
-				'ver'      => '1.9.2',
+				'ver'      => '1.11.3',
 			),
 			'jquery-ui-widget' => array(
 				'path'     => '',
 				'deps'     => array(),
-				'ver'      => '1.9.2',
+				'ver'      => '1.11.3',
 			),
 			'jquery-ui-mouse' => array(
 				'path'     => '',
 				'deps'     => array('jquery-ui-widget'),
-				'ver'      => '1.9.2',
+				'ver'      => '1.11.3',
 			),
 			'jquery-ui-slider' => array(
 				'path'     => '',
 				'deps'     => array('jquery', 'jquery-ui-core', 'jquery-ui-widget', 'jquery-ui-mouse'),
-				'ver'      => '1.9.2',
+				'ver'      => '1.11.3',
 			),
 			'jquery-ui-datepicker' => array(
 				'path'     => '',
 				'deps'     => array('jquery', 'jquery-ui-core', 'jquery-ui-widget'),
-				'ver'      => '1.9.2',
+				'ver'      => '1.11.3',
 			),
 			'jquery-typing' => array(
 				'path'     => VP_PUBLIC_URL . '/js/vendor/jquery.typing-0.2.0.min.js',

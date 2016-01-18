@@ -16,15 +16,6 @@
 		return result;
 	};
 
-	var is_ie      = $.browser.msie;
-	var ie_version = 0;
-
-	if(is_ie)
-	{
-		ie_version = jQuery.browser.version;
-		ie_version = parseFloat(ie_version);
-	}
-
 	// custom checkbox and radiobutton event binding
 	vp.custom_check_radio_event(".vp-wrap", ".vp-field.vp-checked-field .field .input label");
 
