@@ -74,6 +74,7 @@ class Jogja_Core {
 		$this->load_dependencies();
 		$this->load_addons();
 		$this->load_extensions();
+		$this->load_widgets();
 		$this->load_functions();
 		$this->set_locale();
 	}
@@ -123,6 +124,16 @@ class Jogja_Core {
 	}
 
 	/**
+	 * Load Widgets
+	 *
+	 * @return void
+	 **/
+	private function load_widgets() {
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'addons/widgets/widget-instagram-gallery.php';
+	}
+
+
+	/**
 	 * Load Extensions
 	 *
 	 * @return void
@@ -130,6 +141,7 @@ class Jogja_Core {
 	private function load_extensions() {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/extensions/extended-post-types.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/extensions/extended-taxonomies.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/extensions/widget-factory.php';
 	}
 
 	/**

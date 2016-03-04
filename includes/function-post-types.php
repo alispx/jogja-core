@@ -54,6 +54,7 @@ function jogja_core_register_post_types() {
 				'supports'      => array( 'title', 'editor', 'thumbnail' ),
 				'menu_icon' 	=> 'dashicons-category',
 				'menu_position' => 7.25,
+				'has_archive'	=> false,
 			),
 			array(
 				# Override the base names used for labels:
@@ -94,6 +95,7 @@ function jogja_core_register_post_types() {
 				'supports'      => array( 'title', 'thumbnail' ),
 				'menu_icon' 	=> 'dashicons-format-chat',
 				'menu_position' => 8.25,
+				'has_archive'	=> false,
 			),
 			array(
 				# Override the base names used for labels:
@@ -125,6 +127,7 @@ function jogja_core_register_post_types() {
 				'supports'      => array( 'title', 'thumbnail' ),
 				'menu_icon' 	=> 'dashicons-camera',
 				'menu_position' => 8.50,
+				'has_archive'	=> false,
 			),
 			array(
 				# Override the base names used for labels:
