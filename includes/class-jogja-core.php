@@ -120,6 +120,7 @@ class Jogja_Core {
 	 **/
 	private function load_addons() {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'addons/metabox/bootstrap.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'addons/carbon-fields/carbon-fields-plugin.php';
 		new jogja_Mie_Customizer();
 	}
 

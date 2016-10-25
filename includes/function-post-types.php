@@ -17,7 +17,7 @@ function jogja_flush_rewrite_rules() {
  * @return void
  * @author jogja-core
  **/
-add_action( 'init', 'jogja_core_register_post_types' );
+add_action( 'init', 'jogja_core_register_post_types', 0 );
 function jogja_core_register_post_types() {
 	
 	if ( current_theme_supports( 'jogja-portfolio' ) ) {
@@ -134,6 +134,183 @@ function jogja_core_register_post_types() {
 				'singular' => 'Slide',
 				'plural'   => 'Slides',
 				'slug'     => 'slide',
+			)
+		);
+
+	}
+
+	if ( current_theme_supports( 'jogja-galleries' ) ) {
+
+		register_extended_post_type( 'jogja-galleries',
+			array(
+				'admin_cols' => array(
+					'title' 			=> array(
+							'title'			=> 'Title'
+					),
+					'featured_image' 	=> array(
+						'title'          	=> 'Image',
+						'featured_image' 	=> 'thumbnail',
+						'height' 			=> 80,
+						'width' 			=> 80
+
+					),
+					'date'
+				),
+				'supports'      => array( 'title', 'thumbnail', 'editor' ),
+				'menu_icon' 	=> 'dashicons-format-image',
+				'menu_position' => 8.70,
+				'has_archive'	=> false,
+			),
+			array(
+				# Override the base names used for labels:
+				'singular' => 'Gallery',
+				'plural'   => 'Galleries',
+				'slug'     => 'gallery',
+			)
+		);
+
+		// Register Taxonomy Gallery categories
+		register_extended_taxonomy( 'gallery_cat' , 'jogja-galleries', array(),
+			array(
+				'singular' 	=> 'Category',
+				'plural' 	=> 'Categories',
+				'slug'		=> 'gallery_cat',
+				)
+		);
+
+	}
+
+	if ( current_theme_supports( 'jogja-events' ) ) {
+
+		register_extended_post_type( 'jogja-events',
+			array(
+				'admin_cols' => array(
+					'title' 			=> array(
+							'title'			=> 'Title'
+					),
+					'featured_image' 	=> array(
+						'title'          	=> 'Image',
+						'featured_image' 	=> 'thumbnail',
+						'height' 			=> 80,
+						'width' 			=> 80
+
+					),
+					'date'
+				),
+				'supports'      => array( 'title', 'thumbnail', 'editor' ),
+				'menu_icon' 	=> 'dashicons-calendar',
+				'menu_position' => 8.80,
+				'has_archive'	=> false,
+			),
+			array(
+				# Override the base names used for labels:
+				'singular' => 'Event',
+				'plural'   => 'Events',
+				'slug'     => 'event',
+			)
+		);
+
+	}
+
+	if ( current_theme_supports( 'jogja-stories' ) ) {
+
+		register_extended_post_type( 'jogja-stories',
+			array(
+				'admin_cols' => array(
+					'title' 			=> array(
+							'title'			=> 'Title'
+					),
+					'featured_image' 	=> array(
+						'title'          	=> 'Image',
+						'featured_image' 	=> 'thumbnail',
+						'height' 			=> 80,
+						'width' 			=> 80
+
+					),
+					'date'
+				),
+				'supports'      => array( 'title', 'thumbnail', 'editor' ),
+				'menu_icon' 	=> 'dashicons-sticky',
+				'menu_position' => 8.90,
+				'has_archive'	=> false,
+			),
+			array(
+				# Override the base names used for labels:
+				'singular' => 'Story',
+				'plural'   => 'Stories',
+				'slug'     => 'story',
+			)
+		);
+
+	}
+
+	if ( current_theme_supports( 'jogja-peoples' ) ) {
+
+		register_extended_post_type( 'jogja-peoples',
+			array(
+				'admin_cols' => array(
+					'title' 			=> array(
+							'title'			=> 'Title'
+					),
+					'featured_image' 	=> array(
+						'title'          	=> 'Image',
+						'featured_image' 	=> 'thumbnail',
+						'height' 			=> 80,
+						'width' 			=> 80
+
+					),
+					'date'
+				),
+				'supports'      => array( 'title', 'thumbnail', 'editor' ),
+				'menu_icon' 	=> 'dashicons-businessman',
+				'menu_position' => 8.99,
+				'has_archive'	=> false,
+			),
+			array(
+				# Override the base names used for labels:
+				'singular' => 'People',
+				'plural'   => 'Peoples',
+				'slug'     => 'people',
+			)
+		);
+
+		register_extended_taxonomy( 'people-group' , 'jogja-peoples', array(),
+			array(
+				'singular' 	=> 'Group',
+				'plural' 	=> 'Groups',
+				'slug'		=> 'group',
+				)
+		);
+
+	}
+
+	if ( current_theme_supports( 'jogja-guestbook' ) ) {
+
+		register_extended_post_type( 'jogja-guestbook',
+			array(
+				'admin_cols' => array(
+					'title' 			=> array(
+							'title'			=> 'Title'
+					),
+					'featured_image' 	=> array(
+						'title'          	=> 'Image',
+						'featured_image' 	=> 'thumbnail',
+						'height' 			=> 80,
+						'width' 			=> 80
+
+					),
+					'date'
+				),
+				'supports'      => array( 'title', 'thumbnail', 'editor' ),
+				'menu_icon' 	=> 'dashicons-format-chat',
+				'menu_position' => 8.993,
+				'has_archive'	=> false,
+			),
+			array(
+				# Override the base names used for labels:
+				'singular' => 'Guest Book',
+				'plural'   => 'Guest Books',
+				'slug'     => 'guest-book',
 			)
 		);
 
